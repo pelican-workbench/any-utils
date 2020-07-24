@@ -1,6 +1,6 @@
 {
   "name": "any-utils",
-  "version": "1.1.2-alpha.0",
+  "version": "1.1.1",
   "description": "js 工具库",
   "main": "./lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,6 +12,9 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build && npm test"
   },
+  "files": [
+    "lib"
+  ],
   "engines": {
     "node": ">=8.0.0"
   },
