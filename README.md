@@ -84,6 +84,81 @@ parseQuery('key1=18127873881&key2=2') // { key1: '18127873881', key2: '2' }
 parseQuery('') // {}
 ```
 
+### 4. 判断数据类型
+
+判断数据类型
+
+#### Usage
+
+```javascript
+import { getTypeof, isString, isBoolean, isObject, isArray, isFunction, isDate } from '../src/typeof';
+
+// 判断是否为数组
+getTypeof([1, 2])); // array
+isArray([1, 2]); // true
+isArray({}); // false
+
+// 判断是否为字符串
+getTypeof('我是字符串'); // string
+isString('我是字符串'); // true
+isString(false); // false
+
+// 判断是否为对象
+getTypeof({a: 2}); // object
+isObject({a: 2}); // true
+isObject(false); // false
+
+// 判断 null 的类型
+getTypeof(null); // null
+
+// 判断是否为 boolean
+getTypeof(false); // boolean
+isBoolean(false); // true
+isBoolean({a: 2}); // false
+
+// 判断 number 类型
+getTypeof(1); // number
+
+// 判断 function
+getTypeof(isFunction); // function
+isFunction(isBoolean); // true
+isFunction(false); // false
+
+// 判断 date
+const date = new Date();
+getTypeof(date); // date
+isDate(date); // true
+isDate(false); // false
+```
+
+### 4. 判断数据类型
+
+dom 类方法
+
+#### Usage
+
+```html
+<div class="demo" id="demo" data-index="1"></div>
+```
+
+```javascript
+import { isHTMLElement, hasClass, addClass, getDataByAttribute } from '../src/typeof';
+
+const dom = document.getElementById('demo');
+
+// 判断是否为 dom
+isHTMLElement(dom, ); // true
+
+// 判断元素是不是有某个 className
+hasClass(dom, 'demo'); // true
+
+// 给某个元素添加 className
+addClass(dom, 'newClass'); // <div class="demo" id="demo newClass"></div>
+
+// 在 Attribute 属性里面取 data- 开头的属性
+getDataByAttribute(dom, 'index'); // 1
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.
