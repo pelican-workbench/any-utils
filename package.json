@@ -1,0 +1,26 @@
+{
+  "name": "any-utils",
+  "version": "1.0.0",
+  "description": "js 工具库",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "tsc && jest --coverage",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisong981174580/any-utils.git"
+  },
+  "author": "lisong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisong981174580/any-utils/issues"
+  },
+  "homepage": "https://github.com/lisong981174580/any-utils#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "jest": "^25.1.0",
+    "typescript": "^3.7.5"
+  }
+}
