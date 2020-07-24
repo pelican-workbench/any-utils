@@ -12,14 +12,6 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build && npm test"
   },
-  "files": [
-    "lib"
-  ],
-  "directories": {
-    "lib": "./lib",
-    "src": "./src",
-    "test": "./src"
-  },
   "engines": {
     "node": ">=8.0.0"
   },
