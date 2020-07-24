@@ -68,6 +68,22 @@ isEmpty([1]); // false
 isEmpty(1); // false
 ```
 
+### 3. parseQuery
+
+将类似 key1=18127873881&key2=2 格式的数据解析为 { key1: '18127873881', key2: 2 }
+
+#### Usage
+
+```javascript
+import { parseQuery } from 'any-utils';
+
+// 解析 key1=18127873881&key2=2
+parseQuery('key1=18127873881&key2=2') // { key1: '18127873881', key2: '2' }
+
+// 解析空字符串
+parseQuery('') // {}
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.
