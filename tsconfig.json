@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "lib": [
+      "es5",
+      "es6",
+      "dom",
+      "es2015.promise"
+    ],
+    "target": "es5",
+  },
+  "include": ["./src/index.ts"],
+  "exclude": [
+    "node_modules"
+  ],
+}
