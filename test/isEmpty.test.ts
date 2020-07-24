@@ -9,7 +9,7 @@ test('判断空对象', () => {
 });
 
 test('判断非空对象', () => {
-  expect(isEmpty({ a:1 })).toBe(false);
+  expect(isEmpty({ a: 1 })).toBe(false);
 });
 
 test('判断非空数组', () => {

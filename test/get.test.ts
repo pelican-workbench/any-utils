@@ -10,9 +10,9 @@ test('测试嵌套对象存在的可枚举属性 line1', () => {
         line1: 'westwish st',
         line2: 'washmasher',
         city: 'wallas',
-        state: 'WX'
-      }
-    }
+        state: 'WX',
+      },
+    },
   }, ['personalInfo', 'address', 'line1'])).toBe('westwish st');
 });
 
@@ -26,9 +26,9 @@ test('测试嵌套对象不存在的属性 line3', () => {
         line1: 'westwish st',
         line2: 'washmasher',
         city: 'wallas',
-        state: 'WX'
-      }
-    }
+        state: 'WX',
+      },
+    },
   }, ['personalInfo', 'address', 'line3'])).toBe(undefined);
 });
 
@@ -42,9 +42,9 @@ test('测试嵌套对象不存在的属性 line4', () => {
         line1: 'westwish st',
         line2: 'washmasher',
         city: 'wallas',
-        state: 'WX'
-      }
-    }
+        state: 'WX',
+      },
+    },
   }, ['personalInfo', 'line4', 'address'])).toBe(undefined);
 });
 
@@ -58,9 +58,9 @@ test('测试嵌套数组存在的不可枚举属性 length', () => {
         line1: 'westwish st',
         line2: 'washmasher',
         city: [],
-        state: 'WX'
-      }
-    }
+        state: 'WX',
+      },
+    },
   }], [0, 'personalInfo', 'address', 'city', 'length'])).toBe(0);
 });
 
@@ -74,9 +74,9 @@ test('测试嵌套数组存在的可枚举属性 state', () => {
         line1: 'westwish st',
         line2: 'washmasher',
         city: [],
-        state: 'WX'
-      }
-    }
+        state: 'WX',
+      },
+    },
   }], [0, 'personalInfo', 'address', 'state'])).toBe('WX');
 });
 
