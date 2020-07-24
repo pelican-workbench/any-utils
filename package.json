@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "build": "tsc",
-    "lint": "tslint --project tsconfig.json"
+    "lint": "tslint --project tsconfig.json",
+    "prepublish": "npm run lint && npm test && npm run build"
   },
   "repository": {
     "type": "git",
