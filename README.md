@@ -1,6 +1,6 @@
 # any-utils
 
-> 纯 JS utils 库，适用前端任何场景
+纯 JS utils 库，适用前端任何场景
 
 ## Installment
 
@@ -12,7 +12,7 @@ npm install any-utils --save
 
 ### 1. get
 
-> 访问嵌套对象，避免代码中出现类似 a && a.b ? a.b.c : null 的代码
+访问嵌套对象，避免代码中出现类似 a && a.b ? a.b.c : null 的代码
 
 #### Usage
 
@@ -43,9 +43,9 @@ npm install any-utils --save
   get(data, [0, 'personalInfo', 'address', 'line2', 'wx'], '我是默认值'); // 我是默认值
 ```
 
-### 1. isEmpty
+### 2. isEmpty
 
-> 判断是不是空对象或者空数组
+判断是不是空对象或者空数组
 
 #### Usage
 
