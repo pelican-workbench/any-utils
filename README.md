@@ -131,7 +131,7 @@ isDate(date); // true
 isDate(false); // false
 ```
 
-### 4. 判断数据类型
+### 5. dom 类方法
 
 dom 类方法
 
@@ -159,7 +159,7 @@ addClass(dom, 'newClass'); // <div class="demo" id="demo newClass"></div>
 getDataByAttribute(dom, 'index'); // 1
 ```
 
-### 5. deepClone
+### 6. deepClone
 
 深拷贝数组或对象
 
