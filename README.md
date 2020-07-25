@@ -159,6 +159,33 @@ addClass(dom, 'newClass'); // <div class="demo" id="demo newClass"></div>
 getDataByAttribute(dom, 'index'); // 1
 ```
 
+### 5. deepClone
+
+深拷贝数组或对象
+
+#### Usage
+
+```javascript
+  import { deepClone } from 'any-utils';
+  
+  const source = {
+    age: 20,
+    name: 'allen',
+    address: {
+      city: 'shanxi',
+    },
+    arr: [1, 'a', ['c', 2, {a: 2}]],
+  };
+
+  const deepCloneObj = deepClone(source);
+  deepCloneObj.address.city = '南京';
+
+  const input = source.address.city;
+  const expectation = 'shanxi';
+
+  input === expectation // true
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.
