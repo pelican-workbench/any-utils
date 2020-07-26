@@ -186,6 +186,25 @@ getDataByAttribute(dom, 'index'); // 1
   input === expectation // true
 ```
 
+### 7. createCache
+
+缓存数据
+
+#### Usage
+
+```javascript
+  import { createCache } from 'any-utils';
+  
+  // 创建一个缓存容器
+  const c = createCache();
+
+  // 设置缓存数据
+  c.set('name', 'allen');
+
+  // 获取缓存数据
+  c.get('name');
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.

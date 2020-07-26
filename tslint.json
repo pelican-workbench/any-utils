@@ -1,6 +1,8 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "only-arrow-functions": false,
+    "object-literal-shorthand": false,
     "ordered-imports": false,
     "object-literal-sort-keys": false,
     "quotemark": [true, "single"]
