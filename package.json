@@ -1,6 +1,6 @@
 {
   "name": "any-utils",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "js 工具库",
   "main": "./lib/index.js",
   "types": "lib/index.d.ts",
