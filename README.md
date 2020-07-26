@@ -205,6 +205,42 @@ getDataByAttribute(dom, 'index'); // 1
   c.get('name');
 ```
 
+### 8. debounce
+
+防抖
+
+#### Usage
+
+```javascript
+  import { debounce } from 'any-utils';
+
+  //事件处理函数
+  function handle() {
+    console.log('-- do something --');
+  }
+
+  // 延时 1000ms
+  debounce(handle, 1000);
+```
+
+### 9. throttle
+
+节流
+
+#### Usage
+
+```javascript
+  import { throttle } from 'any-utils';
+
+  //事件处理函数
+  function handle() {
+    console.log('-- do something --');
+  }
+
+  // 延时 1000ms
+  throttle(handle, 1000);
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.
