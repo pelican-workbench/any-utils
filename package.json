@@ -36,5 +36,23 @@
     "jest": "^25.1.0",
     "tslint": "^5.14.0",
     "typescript": "^3.7.5"
-  }
+  },
+  "keywords": [
+    "createCache",
+    "get",
+    "deepClone",
+    "isHTMLElement",
+    "hasClass",
+    "addClass",
+    "getDataByAttribute",
+    "isEmpty",
+    "parseQuery",
+    "getTypeof",
+    "isString",
+    "isBoolean",
+    "isObject",
+    "isArray",
+    "isFunction",
+    "isDate"
+  ]
 }
