@@ -53,6 +53,8 @@
     "isObject",
     "isArray",
     "isFunction",
-    "isDate"
+    "isDate",
+    "throttle",
+    "debounce"
   ]
 }
