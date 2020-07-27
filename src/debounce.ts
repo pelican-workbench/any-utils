@@ -15,8 +15,14 @@ export function debounce(func, ms: number) {
   let timer = null;
 
   return function() {
-    clearTimeout(timer);
+    const args = arguments;
 
-    timer = setTimeout(func, ms);
+    if (timer) {
+      clearTimeout(timer);
+    }
+
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, ms);
   };
 }
