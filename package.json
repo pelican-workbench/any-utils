@@ -5,9 +5,8 @@
   "main": "./lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "clean": "rm -rf ./lib && mkdir lib",
     "test": "jest --coverage",
-    "build": "npm run clean && tsc --declaration",
+    "build": "tsc --declaration",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build && npm test"

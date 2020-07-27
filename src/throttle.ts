@@ -8,18 +8,20 @@ import { isFunction } from './typeof';
  * @return function
  */
 
-export function throttle(fn, interval:number = 500) {
+export function throttle(fn, delay: number = 500) {
   if (!isFunction(fn)) {
     throw new RangeError('fn 必须是函数类型');
   }
   let run = true;
-  return function() {
-      if (!run) return;
-      let args = arguments
-      run = false;
-      setTimeout(() => {
-          fn.apply(this, args);
-          run = true;
-      }, interval);
+  return function(): any {
+    if (!run) {
+      return;
+    }
+    const args = arguments;
+    run = false;
+    setTimeout(() => {
+      fn.apply(this, args);
+      run = true;
+    }, delay);
   };
 }

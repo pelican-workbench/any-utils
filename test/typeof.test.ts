@@ -1,4 +1,4 @@
-import { getTypeof, isString, isBoolean, isObject, isArray, isFunction, isDate } from '../src/typeof';
+import { getTypeof, isString, isBoolean, isObject, isArray, isFunction, isDate, isJSON } from '../src/typeof';
 
 test('判断是否为数组', () => {
   expect(getTypeof([1, 2])).toBe('array');
@@ -44,4 +44,11 @@ test('判断是否为 date', () => {
   expect(getTypeof(date)).toBe('date');
   expect(isDate(date)).toBe(true);
   expect(isDate(false)).toBe(false);
+});
+
+test('判断是否为JSON数据格式字符串', () => {
+  expect(isJSON('123')).toBe(false);
+  expect(isJSON('{}')).toBe(true);
+  expect(isJSON('[1, 2, 3]')).toBe(true);
+  expect(isJSON('{"a":1,"b":2}')).toBe(true);
 });

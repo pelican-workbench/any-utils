@@ -130,10 +130,11 @@ getTypeof(date); // date
 isDate(date); // true
 isDate(false); // false
 
-// // 判断 JSON
-isJSON({a: 1, b: 2}); // true
-isJSON({}); // true
-isJSON([1, 2, 4]); // false
+// // 判断字符串是否是JSON数据格式
+isJSON('123'); // flase
+isJSON('{}'); // true
+isJSON('[1, 2, 3]'); // true
+isJSON('{"a":1,"b":2}'); // true
 ```
 
 ### 5. dom 类方法
