@@ -46,9 +46,10 @@ test('判断是否为 date', () => {
   expect(isDate(false)).toBe(false);
 });
 
-test('判断是否为JSON数据格式字符串', () => {
+test('判断是否为 JSON 数据格式字符串', () => {
   expect(isJSON('123')).toBe(false);
   expect(isJSON('{}')).toBe(true);
   expect(isJSON('[1, 2, 3]')).toBe(true);
   expect(isJSON('{"a":1,"b":2}')).toBe(true);
+  expect(isJSON(1)).toBe(false);
 });
