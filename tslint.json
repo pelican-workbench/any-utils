@@ -1,6 +1,7 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "no-console": false,
     "only-arrow-functions": false,
     "object-literal-shorthand": false,
     "ordered-imports": false,
