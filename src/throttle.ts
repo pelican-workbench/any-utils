@@ -7,21 +7,22 @@ import { isFunction } from './typeof';
  * @param delay number
  * @return function
  */
-
-export function throttle(fn, delay: number = 500) {
-  if (!isFunction(fn)) {
+export function throttle(func, delay: number) {
+  if (!isFunction(func)) {
     throw new RangeError('fn 必须是函数类型');
   }
-  let run = true;
-  return function(): any {
-    if (!run) {
-      return;
-    }
+
+  let timer = null;
+
+  return function() {
     const args = arguments;
-    run = false;
-    setTimeout(() => {
-      fn.apply(this, args);
-      run = true;
-    }, delay);
+
+    if (timer === null) {
+      timer = setTimeout(() => {
+        timer = null;
+
+        func.apply(this, args);
+      }, delay);
+    }
   };
 }
