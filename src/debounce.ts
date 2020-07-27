@@ -4,10 +4,10 @@ import { isFunction } from '../src/typeof';
 /**
  * @desc 防抖
  * @param func function
- * @param ms number
+ * @param delay number
  * @return function
  */
-export function debounce(func, ms: number) {
+export function debounce(func, delay: number) {
   if (!isFunction(func)) {
     throw new RangeError('func 必须是函数类型');
   }
@@ -23,6 +23,6 @@ export function debounce(func, ms: number) {
 
     timer = setTimeout(() => {
       func.apply(this, args);
-    }, ms);
+    }, delay);
   };
 }
