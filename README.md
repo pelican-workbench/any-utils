@@ -91,7 +91,7 @@ parseQuery('') // {}
 #### Usage
 
 ```javascript
-import { getTypeof, isString, isBoolean, isObject, isArray, isFunction, isDate } from '../src/typeof';
+import { getTypeof, isString, isBoolean, isObject, isArray, isFunction, isDate, isJSON } from '../src/typeof';
 
 // 判断是否为数组
 getTypeof([1, 2])); // array
@@ -129,6 +129,11 @@ const date = new Date();
 getTypeof(date); // date
 isDate(date); // true
 isDate(false); // false
+
+// // 判断 JSON
+isJSON({a: 1, b: 2}); // true
+isJSON({}); // true
+isJSON([1, 2, 4]); // false
 ```
 
 ### 5. dom 类方法

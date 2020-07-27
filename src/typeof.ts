@@ -46,3 +46,17 @@ export function isFunction(target): boolean {
 export function isDate(target): boolean {
   return getTypeof(target) === 'date';
 }
+
+
+/**
+ * 是否是 JSON
+ */
+export function isJSON(obj): boolean {
+  obj = JSON.stringify(obj);
+  
+  if (!/^\{[\s\S]*\}$/.test(obj)) {
+      return false;
+  }
+
+  return true;
+}
