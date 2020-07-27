@@ -58,6 +58,7 @@ export function isJSON(source: any): boolean {
   }
 
   const obj = safeJSONParse(source, false);
+  const type = getTypeof(obj);
 
-  return getTypeof(obj) === 'object' || getTypeof(obj) === 'array';
+  return type === 'object' || type === 'array';
 }
