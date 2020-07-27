@@ -1,3 +1,5 @@
+import { safeJSONParse } from './safeJSONParse';
+
 /**
  * 判断数据类型
  */
@@ -48,20 +50,14 @@ export function isDate(target): boolean {
 }
 
 /**
- * 是否是 JSON字符串
+ * 是否是 JSON 字符串
  */
-export function isJSON(str: string): boolean {
-  if (typeof str === 'string') {
-    try {
-      const obj = JSON.parse(str);
-      if (typeof obj === 'object' && obj) {
-        return true;
-      } else {
-        return false;
-      }
-    } catch (e) {
-      return false;
-    }
+export function isJSON(source: any): boolean {
+  if (!isString(source)) {
+    return false;
   }
-  return false;
+
+  const obj = safeJSONParse(source, false);
+
+  return getTypeof(obj) === 'object' || getTypeof(obj) === 'array';
 }
