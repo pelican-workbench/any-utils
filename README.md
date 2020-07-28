@@ -248,6 +248,32 @@ getDataByAttribute(dom, 'index'); // 1
   throttle(handle, 1000);
 ```
 
+### 10. safeJSONParse
+
+解析 JSON 字符串
+
+#### Usage
+
+```javascript
+  import { safeJSONParse } from 'any-utils';
+  
+  // 解析 JSON 格式字符串
+  const objStr = "{ "a": 1, "b": 2}";
+  safeJSONParse(objStr); // { a: 1, b: 2}
+
+  // 解析数组字符串
+  const arrStr = "[1, 2, 'Jack']";
+  safeJSONParse(arrStr); // [1, 2, "Jack"]
+
+  // 解析非 JSON 数据格式字符串
+  const str = 'abc';
+  safeJSONParse(str); // {}
+  safeJSONParse(str, false); // false
+
+```
+
+
+
 ## Development
 
 Build with TypeScript and tested by jest.
