@@ -267,8 +267,12 @@ getDataByAttribute(dom, 'index'); // 1
 
   // 解析非 JSON 数据格式字符串
   const str = 'abc';
+
+  // 解析失败默认返回 {}
   safeJSONParse(str); // {}
-  safeJSONParse(str, false); // false
+
+  // 也可以自定义返回值
+  safeJSONParse(str, '我是默认值'); // 我是默认值
 ```
 
 ## Development
