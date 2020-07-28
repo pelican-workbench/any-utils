@@ -1,5 +1,5 @@
 // TODO: 无单元测试
-import { isFunction } from '../src/typeof';
+import { isFunction } from './typeof';
 
 /**
  * @desc 防抖
