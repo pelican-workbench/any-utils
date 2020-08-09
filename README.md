@@ -308,9 +308,9 @@ getDataByAttribute(dom, 'index'); // 1
   fetchEnv() // 相当于 fetchEnv(window.location.href)
 ```
 
-### 13. fetchEnv
+### 13. 判断当前系统类型
 
-根据 url 是否包含 dev、test、pre、prod 判断是否为 dev、test、pre、prod  环境
+根据 navigator.userAgent 判断当前系统类型
 
 #### Usage
 
