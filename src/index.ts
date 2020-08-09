@@ -8,3 +8,6 @@ export * from './cache';
 export * from './debounce';
 export * from './throttle';
 export * from './safeJSONParse';
+export * from './navigator';
+export * from './includes';
+export * from './fetchEnv';

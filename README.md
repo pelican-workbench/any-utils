@@ -275,6 +275,52 @@ getDataByAttribute(dom, 'index'); // 1
   safeJSONParse(str, '我是默认值'); // 我是默认值
 ```
 
+### 11. includes
+
+判断字符串或数组的包含关系，兼容不支持 includes 的场景
+
+#### Usage
+
+```javascript
+  import { includes } from 'any-utils';
+  
+  includes([1, 2, 3], 1) // true
+  includes(['2', '1', '3'], '1') // true
+  includes('我是字符串', '字符串') // true
+  includes('我是字符串', '其他') // false
+```
+
+### 12. fetchEnv
+
+根据 url 是否包含 dev、test、pre、prod 判断是否为 dev、test、pre、prod  环境
+
+#### Usage
+
+```javascript
+  import { fetchEnv } from 'any-utils';
+  
+  fetchEnv('https://www.imooc.dev.com/') // dev
+  fetchEnv('https://www.imooc.test.com/') // test
+  fetchEnv('https://www.imooc.pre.com/') // pre
+  fetchEnv('https://www.imooc.prod.com/') // prod
+
+  // 支持直接读 window.location.href
+  fetchEnv() // 相当于 fetchEnv(window.location.href)
+```
+
+### 13. fetchEnv
+
+根据 url 是否包含 dev、test、pre、prod 判断是否为 dev、test、pre、prod  环境
+
+#### Usage
+
+```javascript
+  import { isIos, isChrome } from 'any-utils';
+  
+  isIos() // 返回一个 boolean 值，是否为 isIos 系统
+  isChrome() // 返回一个 boolean 值，是否为谷歌浏览器
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.
