@@ -47,3 +47,31 @@ export function getDataByAttribute(el: HTMLElement, name: string) {
 
   return el.getAttribute(prefix + name);
 }
+
+/**
+ * 通用事件绑定函数
+ */
+export function bindEvent(elem, type, selector, fn) {
+  if (!isHTMLElement(elem)) {
+    throw new RangeError('elem 必须是 HTMLElement');
+  }
+
+  if (fn == null) {
+    fn = selector;
+    selector = null;
+  }
+
+  elem.addEventListener(type, (event) => {
+    const target = event.target;
+
+    if (selector) {
+      // 代理绑定
+      if (target.matches(selector)) {
+        fn.call(target, event);
+      }
+    } else {
+      // 普通绑定
+      fn.call(target, event);
+    }
+  });
+}

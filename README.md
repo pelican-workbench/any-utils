@@ -149,7 +149,7 @@ dom 类方法
 ```
 
 ```javascript
-import { isHTMLElement, hasClass, addClass, getDataByAttribute } from '../src/typeof';
+import { isHTMLElement, hasClass, addClass, getDataByAttribute, bindEvent } from '../src/typeof';
 
 const dom = document.getElementById('demo');
 
@@ -164,6 +164,18 @@ addClass(dom, 'newClass'); // <div class="demo" id="demo newClass"></div>
 
 // 在 Attribute 属性里面取 data- 开头的属性
 getDataByAttribute(dom, 'index'); // 1
+
+// 通用事件绑定函数 bindEvent(elem, type, selector, fn)
+// 普通绑定
+let dom = document.getElementById('custom-bg');
+bindEvent(dom, 'click', event => {
+  console.log('我是普通绑定')
+})
+
+// 代理绑定
+bindEvent(dom, 'click', '.selector', event => {
+  console.log('我只是绑定了 dom 下面 class 名称为 selector 的元素')
+})
 ```
 
 ### 6. deepClone
