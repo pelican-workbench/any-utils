@@ -168,12 +168,12 @@ getDataByAttribute(dom, 'index'); // 1
 // 通用事件绑定函数 bindEvent(elem, type, selector, fn)
 // 普通绑定
 let dom = document.getElementById('custom-bg');
-bindEvent(dom, 'click', event => {
+bindEvent(dom, 'click', function(event) {
   console.log('我是普通绑定')
 })
 
 // 代理绑定
-bindEvent(dom, 'click', '.selector', event => {
+bindEvent(dom, 'click', '.selector', function(event) {
   console.log('我只是绑定了 dom 下面 class 名称为 selector 的元素')
 })
 ```
