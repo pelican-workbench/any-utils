@@ -11,3 +11,4 @@ export * from './safeJSONParse';
 export * from './navigator';
 export * from './includes';
 export * from './fetchEnv';
+export * from './isEqual';
