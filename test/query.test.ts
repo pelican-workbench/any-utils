@@ -1,4 +1,4 @@
-import { parseQuery } from '../src/parseQuery';
+import { parseQuery } from '../src/query';
 
 test('解析 key1=18127873881&key2=2', () => {
   expect(parseQuery('key1=18127873881&key2=2')).toEqual({ key1: '18127873881', key2: '2' });

@@ -68,7 +68,11 @@ isEmpty([1]); // false
 isEmpty(1); // false
 ```
 
-### 3. parseQuery
+### 3. query 类
+
+和 url 相关的方法
+
+#### parseQuery
 
 将类似 key1=18127873881&key2=2 格式的数据解析为 { key1: '18127873881', key2: 2 }
 
