@@ -13,3 +13,4 @@ export * from './includes';
 export * from './fetchEnv';
 export * from './isEqual';
 export * from './flat';
+export * from './unique';

@@ -370,6 +370,18 @@ import { flat } from 'any-utils';
 flat([1, 2, 3, [1, 2, [1, 2]]]) // [1,2,3,1,2,1,2]
 ```
 
+### 15. unique
+
+数组去重
+
+#### Usage
+
+```javascript
+import { unique } from 'any-utils';
+
+unique([1, 2, 3, 3, 3, 3]) // [1,2,3]
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.
