@@ -358,7 +358,7 @@ isEqual({ a: 1, b: {a: 1}}, {a: 1, b: {a: 1}}) // true
 isEqual({ a: 1}, {a: 1, b: {a: 1}}) // false
 ```
 
-### 14. flat
+### 15. flat
 
 数组拍平
 
