@@ -333,6 +333,19 @@ bindEvent(dom, 'click', '.selector', function(event) {
   isChrome() // 返回一个 boolean 值，是否为谷歌浏览器
 ```
 
+### 14. isEqual
+
+判断两个对象是否相等
+
+#### Usage
+
+```javascript
+import { isEqual } from 'any-utils';
+
+isEqual({ a: 1, b: {a: 1}}, {a: 1, b: {a: 1}}) // true
+isEqual({ a: 1}, {a: 1, b: {a: 1}}) // false
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.
