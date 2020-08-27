@@ -79,13 +79,21 @@ isEmpty(1); // false
 #### Usage
 
 ```javascript
-import { parseQuery } from 'any-utils';
+import { parseQuery, getQueryString } from 'any-utils';
 
 // 解析 key1=18127873881&key2=2
 parseQuery('key1=18127873881&key2=2') // { key1: '18127873881', key2: '2' }
 
 // 解析空字符串
 parseQuery('') // {}
+
+// 获取 url 上面参数
+// Location.href = https://www.baidu.com/s?ie=UTF-8
+getQueryString('ie') // UTF-8
+
+// 将 url 上面参数转换成对象
+// Location.href = https://www.baidu.com/s?ie=UTF-8&name=allen
+queryToObject() // { ie: 'UTF-8', name: 'allen'}
 ```
 
 ### 4. 判断数据类型
