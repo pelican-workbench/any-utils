@@ -358,6 +358,18 @@ isEqual({ a: 1, b: {a: 1}}, {a: 1, b: {a: 1}}) // true
 isEqual({ a: 1}, {a: 1, b: {a: 1}}) // false
 ```
 
+### 14. flat
+
+数组拍平
+
+#### Usage
+
+```javascript
+import { flat } from 'any-utils';
+
+flat([1, 2, 3, [1, 2, [1, 2]]]) // [1,2,3,1,2,1,2]
+```
+
 ## Development
 
 Build with TypeScript and tested by jest.

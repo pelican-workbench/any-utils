@@ -12,3 +12,4 @@ export * from './navigator';
 export * from './includes';
 export * from './fetchEnv';
 export * from './isEqual';
+export * from './flat';
