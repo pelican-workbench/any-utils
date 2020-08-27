@@ -1,4 +1,5 @@
 /**
+ * TODO: 未自测
  * 判断是否相等
  */
 export function isEqual(sourceObj, targetObj): boolean {
