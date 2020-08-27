@@ -1,5 +1,6 @@
 /**
  * 数组去重
+ * TODO: 未写单测
  */
 export function unique(arr: any[]) {
   if (window.Set) {
