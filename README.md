@@ -370,7 +370,7 @@ import { flat } from 'any-utils';
 flat([1, 2, 3, [1, 2, [1, 2]]]) // [1,2,3,1,2,1,2]
 ```
 
-### 15. unique
+### 16. unique
 
 数组去重
 
