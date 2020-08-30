@@ -27,7 +27,7 @@ export function getQueryString(name: string): string {
 
   // 支持 URLSearchParams 优先使用 URLSearchParams
   if (isFunction(window.URLSearchParams)) {
-    const params = new URLSearchParams(search);
+    const params = new window.URLSearchParams(search);
 
     return params.get(name);
   }
@@ -52,7 +52,7 @@ export function queryToObject(): Record<string, any> {
   const search = location.search;
 
   if (isFunction(window.URLSearchParams)) {
-    const params = new URLSearchParams(search);
+    const params = new window.URLSearchParams(search);
 
     params.forEach((value, key) => {
       res[key] = value;

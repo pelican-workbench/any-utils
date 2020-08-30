@@ -4,10 +4,7 @@
  */
 export function unique(arr: any[]) {
   if (window.Set) {
-    const set = new Set(arr);
-
-    // @ts-ignore
-    return [...set];
+    return Array.prototype.slice.call(new window.Set(arr));
   }
 
   const res = [];
