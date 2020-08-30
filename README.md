@@ -18,7 +18,7 @@ npm install any-utils --save
 
 ```javascript
   import { get } from 'any-utils';
-  
+
   const data = [{
     id: 101,
     email: 'jack@dev.com',
@@ -33,10 +33,10 @@ npm install any-utils --save
     }
   }];
 
-  // 获取 data[0].personalInfo.address.line2
-  get(data, [0, 'personalInfo', 'address', 'line2']); // westwish st
+  // 获取 data[0].personalInfo.address.line1
+  get(data, [0, 'personalInfo', 'address', 'line1']); // westwish st
 
-  // 获取 data[0].personalInfo.address 不存在的属性 wx
+  // 获取 data[0].personalInfo.address.line2 不存在的属性 wx
   get(data, [0, 'personalInfo', 'address', 'line2', 'wx']); // undefined
 
   // 取不到的情况先默认返回 undefined，也可以设置
@@ -59,7 +59,7 @@ isEmpty([]); // true
 isEmpty({}); // true
 
 // 判断非空对象
-isEmpty({ a:1 }; // false
+isEmpty({ a:1 }); // false
 
 // 判断非空数组
 isEmpty([1]); // false
@@ -132,8 +132,8 @@ isBoolean({a: 2}); // false
 getTypeof(1); // number
 
 // 判断 function
-getTypeof(isFunction); // function
-isFunction(isBoolean); // true
+getTypeof(() => {}); // function
+isFunction(() => {}); // true
 isFunction(false); // false
 
 // 判断 date
@@ -198,7 +198,7 @@ bindEvent(dom, 'click', '.selector', function(event) {
 
 ```javascript
   import { deepClone } from 'any-utils';
-  
+
   const source = {
     age: 20,
     name: 'allen',
@@ -225,7 +225,7 @@ bindEvent(dom, 'click', '.selector', function(event) {
 
 ```javascript
   import { createCache } from 'any-utils';
-  
+
   // 创建一个缓存容器
   const c = createCache();
 
@@ -280,13 +280,13 @@ bindEvent(dom, 'click', '.selector', function(event) {
 
 ```javascript
   import { safeJSONParse } from 'any-utils';
-  
+
   // 解析 JSON 格式字符串
-  const objStr = "{ "a": 1, "b": 2}";
+  const objStr = '{"a":1,"b":2}';
   safeJSONParse(objStr); // { a: 1, b: 2}
 
   // 解析数组字符串
-  const arrStr = "[1, 2, 'Jack']";
+  const arrStr = '[1, 2, "Jack"]';
   safeJSONParse(arrStr); // [1, 2, "Jack"]
 
   // 解析非 JSON 数据格式字符串
@@ -307,7 +307,7 @@ bindEvent(dom, 'click', '.selector', function(event) {
 
 ```javascript
   import { includes } from 'any-utils';
-  
+
   includes([1, 2, 3], 1) // true
   includes(['2', '1', '3'], '1') // true
   includes('我是字符串', '字符串') // true
@@ -322,7 +322,7 @@ bindEvent(dom, 'click', '.selector', function(event) {
 
 ```javascript
   import { fetchEnv } from 'any-utils';
-  
+
   fetchEnv('https://www.imooc.dev.com/') // dev
   fetchEnv('https://www.imooc.test.com/') // test
   fetchEnv('https://www.imooc.pre.com/') // pre
@@ -340,7 +340,7 @@ bindEvent(dom, 'click', '.selector', function(event) {
 
 ```javascript
   import { isIos, isChrome } from 'any-utils';
-  
+
   isIos() // 返回一个 boolean 值，是否为 isIos 系统
   isChrome() // 返回一个 boolean 值，是否为谷歌浏览器
 ```
