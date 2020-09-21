@@ -245,13 +245,13 @@ bindEvent(dom, 'click', '.selector', function(event) {
 ```javascript
   import { debounce } from 'any-utils';
 
-  //事件处理函数，回掉函数支持传参
+  // 事件处理函数，回掉函数支持传参
   function handle(...values) {
     console.log('-- do something --', values);
   }
 
   // 延时 1000ms
-  debounce(handle, 1000);
+  debounce(handle, 1000, this);
 ```
 
 ### 9. throttle
@@ -263,13 +263,13 @@ bindEvent(dom, 'click', '.selector', function(event) {
 ```javascript
   import { throttle } from 'any-utils';
 
-  //事件处理函数，回掉函数支持传参
+  // 事件处理函数，回掉函数支持传参
   function handle(...values) {
     console.log('-- do something --', values);
   }
 
   // 延时 1000ms
-  throttle(handle, 1000);
+  throttle(handle, 1000, this);
 ```
 
 ### 10. safeJSONParse
