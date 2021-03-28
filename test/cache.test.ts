@@ -1,8 +1,10 @@
 import { createCache } from '../src/cache';
 
-test('判断空数组', () => {
-  const c = createCache();
-  c.set('name', 'allen');
+describe('createCache', () => {
+  it ('缓存字符串', () => {
+    const c = createCache();
+    c.set('name', 'allen');
 
-  expect(c.get('name')).toBe('allen');
-});
+    expect(c.get('name')).toBe('allen');
+  })
+})
