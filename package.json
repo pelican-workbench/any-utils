@@ -11,9 +11,10 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build && npm test"
   },
-  "pre-commit": {
-    "run": "test"
-  },
+  "pre-commit": [
+    "lint:fix",
+    "test"
+  ],
   "files": [
     "lib"
   ],

@@ -6,5 +6,5 @@ describe('createCache', () => {
     c.set('name', 'allen');
 
     expect(c.get('name')).toBe('allen');
-  })
-})
+  });
+});
