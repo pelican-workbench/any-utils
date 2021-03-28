@@ -11,6 +11,9 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublish": "npm run build && npm test"
   },
+  "pre-commit": {
+    "run": "test"
+  },
   "files": [
     "lib"
   ],
@@ -37,6 +40,7 @@
     "@babel/preset-typescript": "^7.10.4",
     "@types/jest": "^26.0.7",
     "jest": "^25.1.0",
+    "pre-commit": "^1.2.2",
     "tslint": "^5.14.0",
     "typescript": "^3.7.5"
   },
