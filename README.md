@@ -12,7 +12,7 @@ npm install any-utils --save
 
 ### 1. get
 
-访问嵌套对象，避免代码中出现类似 a && a.b ? a.b.c : null 的代码
+访问嵌套对象，避免代码中出现类似 a && a.b ? a.b.c : null 的代码.
 
 #### Usage
 
